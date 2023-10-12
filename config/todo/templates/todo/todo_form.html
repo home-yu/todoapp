@@ -1,7 +1,7 @@
 {% extends 'todo/base.html' %}
 
 {% block header %}
-<h1>New Create</h1>
+<h1>新規作成</h1>
 {% endblock header %}
 
 {% block content %}
@@ -9,7 +9,7 @@
     <table class="table">
         {{ form.as_table }}
     </table>
-    <a class="btn btn-outline-secondary" href="{% url 'list' %}">Back</a>
-    <input class="btn btn-success" type="submit" value="post">
+    <a class="btn btn-outline-secondary" href="{% url 'list' %}">戻る</a>
+    <input class="btn btn-success" type="submit" value="送信">
 </form>
 {% endblock content %}

@@ -1,13 +1,13 @@
 {% extends 'todo/base.html' %}
 
 {% block header %}
-<h1>Delete</h1>
+<h1>削除</h1>
 {% endblock header %}
 
 {% block content %}
-<h3>Delete <strong>{{task.title}}</strong>?</h3>
+<h3><strong>{{task.title}}</strong>を削除しますか?</h3>
 <form action="" method="post">{% csrf_token %}
-    <a class="btn btn-outline-secondary" href="{% url 'list' %}" role="button">Back</a>
-    <input class="btn btn-danger" type="submit" value="Delete">
+    <a class="btn btn-outline-secondary" href="{% url 'list' %}" role="button">戻る</a>
+    <input class="btn btn-danger" type="submit" value="削除">
 </form>
 {% endblock content %}

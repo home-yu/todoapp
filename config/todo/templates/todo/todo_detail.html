@@ -1,7 +1,7 @@
 {% extends 'todo/base.html' %}
 
 {% block header %}
-<h1>Todo Detail</h1>
+<h1>詳細</h1>
 {% endblock header %}
 
 {% block content %}
@@ -12,7 +12,7 @@
         <p><small class="text-muted">{{task.deadline}}</small></p>
     </div>
 </div>
-<a class="btn btn-outline-secondary mt-2" href="{% url 'list' %}" role="button">Back</a>
-<a class="btn btn-outline-secondary mt-2" href="{% url 'update' task.pk %}" role="button">Update</a>
-<a class="btn btn-danger mt-2" href="{% url 'delete' task.pk %}" role="button">Delete</a>
+<a class="btn btn-outline-secondary mt-2" href="{% url 'list' %}" role="button">戻る</a>
+<a class="btn btn-outline-secondary mt-2" href="{% url 'update' task.pk %}" role="button">更新</a>
+<a class="btn btn-danger mt-2" href="{% url 'delete' task.pk %}" role="button">削除</a>
 {% endblock content %}
