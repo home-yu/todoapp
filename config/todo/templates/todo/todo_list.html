@@ -1,0 +1,29 @@
+{% extends 'todo/base.html' %}
+
+{% block header %}
+<h1>TodoList</h1>
+<h4><a href="{% url 'create' %}">New create</a></h4>
+{% endblock header %}
+
+{% block content %}
+<div class="shadow-sm p-3 mb-5 bg-white rounded">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Deadline</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.title }}</td>
+                <td>{{ task.deadline }}</td>
+                <td><a href="{% url 'detail' task.pk %}">Description</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
