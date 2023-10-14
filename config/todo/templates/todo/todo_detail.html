@@ -13,6 +13,9 @@
     </div>
 </div>
 <a class="btn btn-outline-secondary mt-2" href="{% url 'list' %}" role="button">戻る</a>
+{% if user.is_authenticated %}
 <a class="btn btn-outline-secondary mt-2" href="{% url 'update' task.pk %}" role="button">更新</a>
 <a class="btn btn-danger mt-2" href="{% url 'delete' task.pk %}" role="button">削除</a>
+{% endif %}
+
 {% endblock content %}
