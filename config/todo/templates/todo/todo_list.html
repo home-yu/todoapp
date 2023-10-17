@@ -2,6 +2,7 @@
 
 {% block header %}
 <h1>TodoList</h1>
+<h4><a href="admin/">ログイン</a></h4>
 {% if user.is_authenticated %}
     <h4><a href="{% url 'create' %}">新規作成</a></h4>
 {% endif %}

@@ -24,7 +24,7 @@ from django.core.management.utils import get_random_secret_key
 SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -124,14 +124,14 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEPLOY = True
-if DEPLOY:
+#DEPLOY = True
+#if DEPLOY:
     # SECURE_HSTS_SECONDS = 60 # 無知にいじると危険なのでコメントアウト
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_CONTENT_TYPE_NOSNIFF = True
-    SECURE_BROWSER_XSS_FILTER = True
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    X_FRAME_OPTIONS = "DENY"
-    SECURE_HSTS_PRELOAD = True
+    #SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    #SECURE_CONTENT_TYPE_NOSNIFF = True
+    #SECURE_BROWSER_XSS_FILTER = True
+    #SECURE_SSL_REDIRECT = True
+    #SESSION_COOKIE_SECURE = True
+    #CSRF_COOKIE_SECURE = True
+    #X_FRAME_OPTIONS = "DENY"
+    #SECURE_HSTS_PRELOAD = True
